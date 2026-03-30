@@ -68,7 +68,7 @@ public class Login {
         storedPassword = password;
         storedCell = cell;
 
-        return "User successfully registered.";
+        return "Cell phone number successfully added.";
     }
 
     // Login check
