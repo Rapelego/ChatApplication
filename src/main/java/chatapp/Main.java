@@ -48,9 +48,6 @@ public class Main {
             System.out.println("Cell phone number incorrectly formatted or does not contain international code.");
         }
 
-        // Register user
-        System.out.println(login.registerUser(username, password, cell));
-
         // LOGIN SECTION
         System.out.println("\n===== LOGIN =====");
 
