@@ -30,3 +30,23 @@ public class TestStudent {
         assertTrue(login.checkPasswordComplexity("Ch&sec@ke99!"));
     }
 
+    @Test
+    public void testPasswordIncorrect() {
+        Login login = new Login();
+        assertFalse(login.checkPasswordComplexity("password"));
+    }
+    
+    @Test
+    public void testCellCorrect() {
+        Login login = new Login();
+        assertTrue(login.checkCellPhoneNumber("+27837822931"));
+    }
+    
+    @Test
+    public void testCellIncorrect() {
+        Login login = new Login();
+        assertFalse(login.checkCellPhoneNumber("08966553"));
+    }
+}
+    
+
