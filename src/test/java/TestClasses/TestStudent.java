@@ -19,4 +19,14 @@ public class TestStudent {
         Login login = new Login();
         assertTrue(login.checkUserName("kyl_1"));
     }
+@Test
+    public void testUsernameIncorrect() {
+        Login login = new Login();
+        assertFalse(login.checkUserName("kyle!!!!"));
+    }
+ @Test
+    public void testPasswordCorrect() {
+        Login login = new Login();
+        assertTrue(login.checkPasswordComplexity("Ch&sec@ke99!"));
+    }
 
