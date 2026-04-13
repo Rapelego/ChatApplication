@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  * @author Maditsi Rapelego
  */
 public class Login {
-
+    // Variables to store user details after registration
     private String storedUsername;
     private String storedPassword;
     private String storedCell;

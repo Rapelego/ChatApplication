@@ -29,7 +29,7 @@ public class Main {
         }
 
         System.out.print("Enter password: ");
-        String password = input.nextLine();
+        String password = input.nextLine().trim();
 
         // Password check
         if (login.checkPasswordComplexity(password)) {
@@ -47,15 +47,17 @@ public class Main {
         } else {
             System.out.println("Cell phone number incorrectly formatted or does not contain international code.");
         }
+        // Store user details AFTER validation
+        login.registerUser(username, password, cell);
 
         // LOGIN SECTION
         System.out.println("\n===== LOGIN =====");
 
         System.out.print("Enter username: ");
-        String loginUser = input.nextLine();
+        String loginUser = input.nextLine().trim();
 
         System.out.print("Enter password: ");
-        String loginPass = input.nextLine();
+        String loginPass = input.nextLine().trim();
 
         boolean status = login.loginUser(loginUser, loginPass);
 
