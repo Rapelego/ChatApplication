@@ -2,22 +2,31 @@ package chatapp;
 
 import java.util.Scanner;
 
+/**
+ * Main class for running the Login Application.
+ * Handles user input, validation, and login process.
+ */
 public class Main {
 
     public static void main(String[] args) {
 
+        // Scanner object to read user input from console
         Scanner input = new Scanner(System.in);
+         // Create Login object to access validation and login methods
         Login login = new Login();
 
-        // USER DETAILS
+        // REGISTRATION SECTION//
         System.out.println("===== REGISTRATION =====");
-
+        
+        //Get user's first name
         System.out.print("Enter first name: ");
         String firstName = input.nextLine();
-
+        
+        // Get user's last name
         System.out.print("Enter last name: ");
         String lastName = input.nextLine();
 
+          // Get username input
         System.out.print("Enter username: ");
         String username = input.nextLine();
 
@@ -27,7 +36,8 @@ public class Main {
         } else {
             System.out.println("Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters in length.");
         }
-
+        
+        //Get Password input
         System.out.print("Enter password: ");
         String password = input.nextLine().trim();
 
@@ -38,6 +48,7 @@ public class Main {
             System.out.println("Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.");
         }
 
+        //Get cellphone input
         System.out.print("Enter cell phone (+27...): ");
         String cell = input.nextLine();
 
@@ -53,15 +64,18 @@ public class Main {
         // LOGIN SECTION
         System.out.println("\n===== LOGIN =====");
 
+        // LoginUsername
         System.out.print("Enter username: ");
         String loginUser = input.nextLine().trim();
 
+        //login password
         System.out.print("Enter password: ");
         String loginPass = input.nextLine().trim();
 
+        // Check if login details match stored user
         boolean status = login.loginUser(loginUser, loginPass);
 
-        // Final message
+       // Display login result message
         System.out.println(login.returnLoginStatus(status, firstName, lastName));
 
     }
