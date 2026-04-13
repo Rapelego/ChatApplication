@@ -39,7 +39,7 @@ public class Main {
         
         //Get Password input
         System.out.print("Enter password: ");
-        String password = input.nextLine().trim();
+        String password = input.nextLine().trim();// trim removes extra spaces
 
         // Password check
         if (login.checkPasswordComplexity(password)) {
